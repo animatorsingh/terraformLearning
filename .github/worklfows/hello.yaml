@@ -1,0 +1,23 @@
+name: hello world ci
+
+on:
+  push:
+    branches: [ main ]
+
+jonbs:
+  hello_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Print hello world
+        run: echo "Hello, World!"
+
+      - name: Show branch info
+        run: echo "You are on branch ${{ github.ref_name }}"
+
+      # Step 4: list project files
+      - name: List files
+        run: ls -la
