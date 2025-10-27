@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
 
-jonbs:
+jobs:
   hello_job:
     runs-on: ubuntu-latest
 
